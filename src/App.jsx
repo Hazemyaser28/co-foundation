@@ -7,14 +7,17 @@ import Products from "./pages/Products";
 import Inventory from "./pages/Inventory";
 import Transfers from "./pages/Transfers";
 import Sales from "./pages/Sales";
+import ReceiveStock from "./pages/ReceiveStock";
 
 const tabs = [
   { key: "dashboard", label: "Dashboard" },
   { key: "products", label: "Products" },
+  { key: "receive", label: "Warehouse In" },
   { key: "inventory", label: "Inventory" },
   { key: "transfers", label: "Transfers" },
   { key: "sales", label: "Sales" },
 ];
+
 
 export default function App() {
   const [session, setSession] = useState(null);
@@ -60,6 +63,8 @@ export default function App() {
         {tab === "inventory" && <Inventory />}
         {tab === "transfers" && <Transfers />}
         {tab === "sales" && <Sales />}
+        {tab === "receive" && <ReceiveStock />}
+
       </div>
     </div>
   );
